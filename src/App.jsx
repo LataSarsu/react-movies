@@ -65,7 +65,7 @@ function App() {
             movies={playlist}
             onClose={closeModal}
             onConfirm={setConfirmPlayList}
-            removeFromPlaylist={removeFromPlaylist}
+            removeFromPlaylist={addMovieToPlaylist}
           />
         )}
       </div>
