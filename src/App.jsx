@@ -15,7 +15,9 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const removeFromPlaylist = (movie) => {
+    console.log("Playlist before removal:", playlist); // Debug log
     setPlaylist(playlist.filter((m) => m.imdbID !== movie.imdbID)); // Remove from playlist
+    console.log("Playlist after removal:", playlist); // Debug log
   };
 
   const addMovieToPlaylist = (movie) => {

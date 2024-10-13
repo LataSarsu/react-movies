@@ -10,6 +10,7 @@ const CPList = ({ movies, onClose, onConfirm, removeFromPlaylist }) => {
           <h2>My List</h2>
         </div>
         <div className="movie-list">
+          {" "}
           {/* Added movie-list container */}
           {movies.length === 0 ? (
             <h3>No movies in the playlist.</h3>
@@ -26,7 +27,10 @@ const CPList = ({ movies, onClose, onConfirm, removeFromPlaylist }) => {
                   <span>{movie.Year}</span>
                   <button
                     className="remove-button"
-                    onClick={() => removeFromPlaylist(movie)}
+                    onClick={() => {
+                      console.log("Removing movie:", movie); // Debug log
+                      removeFromPlaylist(movie);
+                    }}
                   >
                     <FaTimes /> {/* Close icon */}
                   </button>
