@@ -1,0 +1,29 @@
+/* Ensure the root elements and containers take full height */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+    /* overflow-x: hidden;Prevent horizontal scroll */
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures it takes up the full viewport height */
+  font-family: sans-serif;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.content {
+  flex-grow: 1; /* Ensures this section takes all available vertical space */
+  padding: 20px;
+  margin-top: 10px;
+  display: flex; /* This helps adjust child alignment */
+  flex-direction: column;
+}
+
+
+
